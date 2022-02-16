@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                 #!/bin/bash
-                ansible-playbook -i hosts --private-key privatekey-1 play.yml
+                ansible-playbook  play.yml
                 '''
             }
           }
