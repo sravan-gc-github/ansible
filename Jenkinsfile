@@ -15,6 +15,7 @@ pipeline {
                    #!/bin/bash
                    git clone https://github.com/sravan-gc-github/ansible.git
                    ls -ltr
+                   whoami
                    '''
             }
         }
