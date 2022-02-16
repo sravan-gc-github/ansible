@@ -11,7 +11,6 @@ pipeline {
                 sh '''
                    #!/bin/bash
                    git clone https://github.com/sravan-gc-github/ansible.git
-                   chown root:root play.yml
                    ls -ltr
                    '''
             }
