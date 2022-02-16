@@ -1,10 +1,11 @@
 pipeline {
-    agent any
-    /*
+    //agent any
+    /*     */
     agent {
         docker { image 'sravangcpdocker/terraform:7' }
+        args '-u root:sudo -v $HOME/workspace/myproject:/myproject'
     }
-     */
+ 
     stages {
         stage('git-clone') {
             steps {
@@ -19,7 +20,7 @@ pipeline {
             steps {
                 sh '''
                 #!/bin/bash
-                ansible-playbook  play.yml
+                ansible-playbook play.yml
                 '''
             }
           }
