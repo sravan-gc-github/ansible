@@ -2,8 +2,10 @@ pipeline {
     //agent any
     /*     */
     agent {
-        docker { image 'sravangcpdocker/terraform:7' }
-        args '-u root:sudo -v $HOME/workspace/myproject:/myproject'
+        docker { 
+            image 'sravangcpdocker/terraform:7'
+            args '-u root:sudo -v $HOME/workspace/myproject:/myproject'
+        }
     }
  
     stages {
